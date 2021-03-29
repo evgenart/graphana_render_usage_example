@@ -43,7 +43,7 @@ def send_mail(FROM,TO,mime_image,grafana_url):
     msg.attach(mime_image)
     # Send the email
     smtp = smtplib.SMTP()
-    smtp_handler = smtplib.SMTP('smtp.bcsprime.local')
+    smtp_handler = smtplib.SMTP('smtp.site_email.local')
     smtp_handler.sendmail(FROM, TO, msg.as_string())
     smtp_handler_quit_status = smtp_handler.quit()
     print(smtp_handler_quit_status)
